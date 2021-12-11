@@ -73,9 +73,11 @@ button {
 	font-size: 1.5rem;
 	cursor: pointer;
 	font-family: monospace;
+	transition: 5s ease-out;
 }
 button:hover {
 	background-color: rgb(100, 196, 228);
+    box-shadow: grey 30px 50px 40px;
 }
 input {
 	width: 25vw;
@@ -87,6 +89,7 @@ body {
 	font-family: monospace;
 	font-size: 1.5rem;
 	background-color: rgb(240, 240, 240);
+	cursor: default;
 }
 .home {
 	position: sticky;
