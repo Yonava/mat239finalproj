@@ -16,9 +16,15 @@
 		
 			<div v-else class="main-container">
 				<h1>Choose Your Poison:</h1>
-				<button v-on:click="switchPage('paths')">Pebble a Path Graph</button>
-				<button v-on:click="switchPage('complete')">Pebble a Complete Graph</button>
-				<button v-on:click="switchPage('cycle')">Pebble a Cycle Graph</button>
+				<button v-on:mouseleave="hover = false; animation = 0" v-on:mouseover="hover = true; model = 'path'; animate()" v-on:click="switchPage('paths')">Pebble a Path Graph</button>
+				<button v-on:mouseleave="hover = false; animation = 0" v-on:mouseover="hover = true; model = 'complete'; animate()" v-on:click="switchPage('complete')">Pebble a Complete Graph</button>
+				<button v-on:mouseleave="hover = false; animation = 0" v-on:mouseover="hover = true; model = 'cycle'; animate()" v-on:click="switchPage('cycle')">Pebble a Cycle Graph</button>
+			</div>
+
+			<div v-if="hover" class="hi">
+				<div v-for="step in steps" :key="step">
+					<img v-if="animation === step" :src="require(`./assets/${model}/${step}.svg`)" alt="animation">
+				</div>
 			</div>
 
 		</center>
@@ -41,7 +47,11 @@ export default {
 	},
 	data: () => {
 		return {
+			model: '',
+			hover: true,
 			selected: '',
+			animation: 0,
+			steps: [1,2,3,4,5,6,7,8,9,10,11],
 		}
 	},
 	mounted() {
@@ -53,6 +63,18 @@ export default {
 	methods: {
 		switchPage(selected) {
 			this.selected = selected
+		},
+		animate() {
+			console.log(this.animation, this.hover)
+			this.animation++;
+			if (this.animation < this.steps.length && this.hover) setTimeout(this.animate, 500);
+			else return
+		},
+		animateComplete() {
+
+		},
+		animateCycle() {
+
 		}
 	},
 	computed: {
@@ -94,5 +116,8 @@ body {
 .home {
 	position: sticky;
 	bottom: 0;
+}
+img {
+	width: 80vw;
 }
 </style>
