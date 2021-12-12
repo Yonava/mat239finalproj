@@ -32,6 +32,7 @@ button {
 }
 button:hover {
     background-color: lightcoral;
+    box-shadow: none;
 }
 h2 {
     font-weight: normal;
