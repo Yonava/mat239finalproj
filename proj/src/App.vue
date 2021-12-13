@@ -80,7 +80,6 @@ export default {
 			this.selected = selected
 		},
 		animate() {
-			console.log(this.animation, this.hover)
 			this.animation++;
 			if (this.animation < this.steps.length && this.hover) setTimeout(this.animate, 500);
 		},
