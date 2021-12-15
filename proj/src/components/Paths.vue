@@ -18,7 +18,7 @@
             <div style="max-width: 50vw;">
                 <p style="transition: 3s" :style="b">In graph theory, a path graph is a graph in which each vertice inbetween the endpoints has 2 protruding degrees chaining the parent vertex and root vertex together.</p>
             </div>
-            <img style="width: 80vw;" src="../assets/path/9.svg" alt="path graph">
+            <img :style="extras" style="width: 80vw;" src="../assets/path/9.svg" alt="path graph">
             <div class="main-tour">
                 <h2 style="transition: 4s ease-in-out;" :style="d">What is the path graphs pebbling number?</h2>
                 <h2 style="transition: 4s ease-in-out;" :style="e">2 to the power of n</h2>
@@ -42,8 +42,8 @@
             </div>
         </div>
         <br><br><br><br><br><br>
-        <h1>Tour Will Exit Automatically</h1>
-        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <h1 :style="extras">Tour Will Exit Automatically</h1>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </div>
 </template>
 
@@ -70,6 +70,7 @@ export default {
             i: 'opacity: 0;',
             j: 'opacity: 0;',
             k: 'opacity: 0;',
+            extras: 'display: none;',
         }
     },
     watch: {
@@ -81,16 +82,17 @@ export default {
         engageTour() {
             this.tour();
             setInterval(() => {window.scrollTo(0, this.pagePos); this.pagePos += 0.1}, 1);
-            this.parentStyle = 'background-color: white;';
+            this.parentStyle = 'background-color: white; cursor: none;';
             this.starting = 'opacity: 0;';
+            this.extras = '';
         },
         tour() {
-            setTimeout(() => this.parentStyle = 'background-color: black;', 2000)
+            setTimeout(() => this.parentStyle = 'background-color: black; cursor: none;', 2000)
             setTimeout(() => this.tourTitle = 'font-size: 40pt; margin: 0px; color: white;', 4000)
             setTimeout(() => this.tourTitleSub = 'font-size: 20pt; margin-top: 0px; color: white', 5000)
             setTimeout(() => this.a = 'color: white;', 10000)
             setTimeout(() => this.b = 'color: white;', 14000)
-            setTimeout(() => this.parentStyle = 'background-color: white;', 30000)
+            setTimeout(() => this.parentStyle = 'background-color: white; cursor: none;', 30000)
             setTimeout(() => this.d = 'opacity: 1', 37200)
             setTimeout(() => this.e = 'opacity: 1', 39400)
             setTimeout(() => this.f = 'opacity: 1', 41300)
@@ -99,8 +101,8 @@ export default {
             setTimeout(() => this.i = 'opacity: 1', 58000)
             setTimeout(() => this.j = 'opacity: 1', 63000)
             setTimeout(() => this.k = 'opacity: 1', 67000)
-            setTimeout(() => this.parentStyle = 'background-color: rgb(255, 200, 200);', 75000)
-            setTimeout(() => location.reload(), 85000)
+            setTimeout(() => this.parentStyle = 'background-color: rgb(255, 200, 200); cursor: none;', 75000)
+            setTimeout(() => location.reload(), 90000)
         },
     }
 }
