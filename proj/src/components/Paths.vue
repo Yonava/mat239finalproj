@@ -14,31 +14,31 @@
             <h2 style="transition: 3s" :style="tourTitle">The Path</h2>
             <p style="transition: 3s" :style="tourTitleSub">Presented By Yona Voss-Andreae</p>
             <br><br>
-            <h2 style="transition: 3s" :style="a">What is a path graph?</h2>
+            <h2 style="transition: 3s" :style="a">What is a Path?</h2>
             <div style="max-width: 50vw;">
                 <p style="transition: 3s" :style="b">In graph theory, a path graph is a graph in which each vertice 
-                    inbetween the endpoints has a protruding degree of 2 chaining the parent vertex and root vertex together.
+                    inbetween the endpoints has a degree of 2 chaining the parent vertex and root vertex together.
                 </p>
             </div>
             <img :style="extras" style="width: 80vw;" src="../assets/path/9.svg" alt="path graph">
             <div class="main-tour">
                 <h2 style="transition: 4s ease-in-out;" :style="d">What is the path graphs pebbling number?</h2>
-                <h2 style="transition: 4s ease-in-out;" :style="e">2 to the power of n</h2>
+                <h2 style="transition: 4s ease-in-out; font-weight: bold;" :style="e">2 to the Power of N</h2>
                 <h2 style="transition: 4s ease-in-out;" :style="f">Why?</h2>
                 <p style="transition: 4s ease-in-out; max-width: 50vw;" :style="g">
-                    The n represents each edge (aka tollway).
+                    N represents each edge (aka tollway).
                     The 2 represents doubling the necessary pebbles to ensure successful pebbling. 
                 </p>
-                <h2 style="transition: 4s ease-in-out;" :style="h">I am player 1, what's my best move here?</h2>
+                <h2 style="transition: 4s ease-in-out;" :style="h">I Am Player 1, What's My Best Move?</h2>
                 <p :style="i" style="transition: 4s ease-in-out; max-width: 50vw;">
-                    The only sensible strategy for you to take, given a path, is to place the target
-                    as far as possible away from the pebbles.
+                    The only sensible strategy for you to take, given a path, is to place the pebbles
+                    as far as possible away from the target.
                 </p>
-                <h2 style="transition: 4s ease-in-out;" :style="j">Does spreading out the pebbles along the path help me?</h2>
+                <h2 style="transition: 4s ease-in-out;" :style="j">Does Spreading Out The Pebbles Along The Path Help Me?</h2>
                 <p :style="k" style="transition: 4s ease-in-out; max-width: 50vw;">
                     Since each tile the pebbles move comes at a hefty
                     50% tax, pebbles placed closer to the target carry exponentially more weight than those placed
-                    father down the path. Due to this, player 1 would gain no additional benefit by dispercing the
+                    father down the path. Due to this, player 1 would gain no additional benefit by dispersing the
                     pebbles throughout the path.
                 </p>
             </div>

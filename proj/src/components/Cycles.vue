@@ -17,7 +17,7 @@
             <h2 style="transition: 3s" :style="a">What is a Cycle Graph?</h2>
             <div style="max-width: 50vw;">
                 <p style="transition: 3s" :style="b">In graph theory, a cycle graph is a graph in which each 
-                vertice has exactly a degree of 2.</p>
+                Vertice has exactly a degree of 2.</p>
             </div>
             <img :style="extras" style="width: 25vw;" src="../assets/cycle/8.svg" alt="path graph">
             <div class="main-tour">
@@ -40,7 +40,7 @@
                 <p :style="i" style="transition: 4s ease-in-out; max-width: 50vw;">
                     Like with the path graph, placing pebbles further from the target diminishes the pebbles ultimate value.
                     Splitting pebbles between paths may be positive at first, however, you must keep in mind
-                    that every pebble you move closer to the target vertice is a donation to player 2 that i'm sure
+                    that every pebble you move closer to the target Vertice is a donation to player 2 that I'm sure
                     they would be very grateful for!
                 </p>
                 <h2 style="transition: 4s ease-in-out;" :style="j">Unsolved...</h2>
@@ -48,7 +48,7 @@
                     The cycle graph posed as the most challenging graph to find an equation for. Be it because there are
                     different equations at play for cycles with odd number vertices juxtaposed to even sums of vertices, or
                     that when I tried to scale it, the problem became much harder to grasp, which came with it uncertainty.
-                    I have thought long and hard about pebbling the cycle, I hope to find a satifying answer to this
+                    I have thought long and hard about pebbling the cycle, I hope to find a satisfying answer to this
                     specific graph type, but unfortunately, as of the end of the semester that hasn't materialized.
                 </p>
             </div>
@@ -87,7 +87,7 @@ export default {
     },
     watch: {
         vectices() {
-            this.vectices > 1 ? this.minPebbles = 2*(2**(this.vectices-1)):this.minPebbles = 'Invalid';
+            this.vectices > 1 ? this.minPebbles = (2**(this.vectices-1))/2+1:this.minPebbles = 'Invalid';
         }
     },
     methods: {

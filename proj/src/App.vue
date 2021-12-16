@@ -16,7 +16,7 @@
 		
 			<div v-else class="main-container">
 
-				<h1>Choose Your Poison:</h1>
+				<h1>Choose Which Graph To Explore:</h1>
 
 				<button v-on:mouseleave="hover = false;
 				animation = 0" v-on:mouseover="hover = true; styling = 'width: 80vw;'; model = 'path'; 

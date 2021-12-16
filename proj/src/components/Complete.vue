@@ -14,25 +14,25 @@
             <h2 style="transition: 3s" :style="tourTitle">The Complete Graph</h2>
             <p style="transition: 3s" :style="tourTitleSub">Presented By Yona Voss-Andreae</p>
             <br><br>
-            <h2 style="transition: 3s" :style="a">What is a complete graph?</h2>
+            <h2 style="transition: 3s" :style="a">What is a Complete Graph?</h2>
             <div style="max-width: 50vw;">
                 <p style="transition: 3s" :style="b">In graph theory, a complete graph is a graph in which each vertice interlinks which each other vertice.</p>
             </div>
             <img style="width: 25vw;" src="../assets/complete/10.svg" alt="path graph">
             <div class="main-tour">
-                <h2 style="transition: 4s ease-in-out;" :style="d">What is the complete graphs pebbling number?</h2>
-                <h2 style="transition: 4s ease-in-out;" :style="e">n</h2>
-                <h2 style="transition: 4s ease-in-out;" :style="f">Why?</h2>
+                <h2 style="transition: 4s ease-in-out;" :style="d">What is the Complete Graphs Pebbling Number?</h2>
+                <h2 style="transition: 4s ease-in-out;" :style="e">Linear N</h2>
+                <h2 style="transition: 4s ease-in-out;" :style="f">Explaination:</h2>
                 <p style="transition: 4s ease-in-out; max-width: 50vw;" :style="g">
-                    The n represents each vertice.
+                    N represents each Vertice.
                     Because player 1 can't place a pebble on the target tile, after
-                    perfectly spreading out all n-1 pebbles, they are forced to place a second pebble on a single vertex
+                    perfectly spreading out all <b>N-1</b> pebbles, they are forced to place a second pebble on a single vertex
                     allowing player 2 to win.
                 </p>
-                <h2 style="transition: 4s ease-in-out;" :style="h">I am player 1, what's my best move here?</h2>
+                <h2 style="transition: 4s ease-in-out;" :style="h">I Am Player 1, What's My Best Move?</h2>
                 <p :style="i" style="transition: 4s ease-in-out; max-width: 50vw;">
-                    Given a complete graph, place one pebble on each non-target vertex until you have no option
-                    but to place two pebbles on a single vertice, thereby granting player 1 a victory.
+                    Given a complete graph, place one pebble on each vertex, excluding the target, until you have no option
+                    but to place two pebbles on a single Vertice, thereby granting player 1 a victory.
                 </p>
             </div>
         </div>
