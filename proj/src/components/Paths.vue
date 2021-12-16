@@ -3,8 +3,8 @@
         <div style="transition: 4s" :style="starting">
             <h1>Path Pebbling</h1>
             <hr>
-            <h2>Input Number of Vectors:</h2>
-            <input type="number" v-model="vectors" />
+            <h2>Input Number of Vectices:</h2>
+            <input type="number" v-model="vectices" />
             <h2>Pebbling Number - {{ minPebbles }}</h2>
             <button @click="engageTour">Start Tour</button>
             <button class="home" v-on:click="$parent.switchPage('')">Home</button>
@@ -16,7 +16,9 @@
             <br><br>
             <h2 style="transition: 3s" :style="a">What is a path graph?</h2>
             <div style="max-width: 50vw;">
-                <p style="transition: 3s" :style="b">In graph theory, a path graph is a graph in which each vertice inbetween the endpoints has 2 protruding degrees chaining the parent vertex and root vertex together.</p>
+                <p style="transition: 3s" :style="b">In graph theory, a path graph is a graph in which each vertice 
+                    inbetween the endpoints has a protruding degree of 2 chaining the parent vertex and root vertex together.
+                </p>
             </div>
             <img :style="extras" style="width: 80vw;" src="../assets/path/9.svg" alt="path graph">
             <div class="main-tour">
@@ -51,7 +53,7 @@
 export default {
     data: () => {
         return {
-            vectors: 7,
+            vectices: 7,
             minPebbles: 64,
             // on the tour
             tourTitle: 'opacity: 0; color: white;',
@@ -74,8 +76,8 @@ export default {
         }
     },
     watch: {
-        vectors() {
-            this.vectors > 1 ? this.minPebbles = 2**(this.vectors-1):this.minPebbles = 'Invalid';
+        vectices() {
+            this.vectices > 1 ? this.minPebbles = 2**(this.vectices-1):this.minPebbles = 'Invalid';
         }
     },
     methods: {

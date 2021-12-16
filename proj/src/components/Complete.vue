@@ -4,8 +4,8 @@
             <h1>Complete Graph Pebbling</h1>
             <hr>
             <h2>Input Number of Vectors:</h2>
-            <input type="number" v-model="vectors" />
-            <h2>Pebbling Number - {{ vectors }}</h2>
+            <input type="number" v-model="vectices" />
+            <h2>Pebbling Number - {{ vectices }}</h2>
             <button @click="engageTour">Start Tour</button>
             <button class="home" v-on:click="$parent.switchPage('')">Home</button>
         </div>
@@ -46,7 +46,7 @@
 export default {
     data: () => {
         return {
-            vectors: 7,
+            vectices: 7,
             minPebbles: 64,
             // on the tour
             tourTitle: 'opacity: 0; color: white;',
