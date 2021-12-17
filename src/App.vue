@@ -12,14 +12,14 @@
 			<p>The goal of player one is to analyze the playing surface (a graph) and choose any Vertice on the graph
 			as the target. After player 1 chooses the target vertex, they are tasked with distributing 
 			pebbles (currency) across other
-			Vertices on the graph.</p>
+			Vertices on the graph. The goal of player 1 is to make it not possible for player 2 to win.</p>
 
 			<h2>Player 2:</h2>
 
 			<p>After player 1 has finished placing the pebbles, player 2 takes over. Pebbles placed by 
 			player 1 act as currency for player 2 in the second round. Player 2s mission is to get at least 1 pebble 
 			on the target Vertex by maneuvering the pebbles on the playing surface, however there is a catch. 
-			Every time player 2 moves pebbles from 1 Vertice to another along an edge, half the pebbles are removed 
+			Every time player 2 moves pebbles from 1 Vertice to another along an edge, half the pebbles that are moved are removed 
 			from the game (lost to taxation). If player 2 moves an odd number of pebbles, the tax is rounded up 
 			(IE moving 9 pebbles costs 5 pebbles).</p>
 

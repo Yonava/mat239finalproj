@@ -1,6 +1,7 @@
 <template>
     <div class="stop-scrolling" style="transition: 7s" :style="parentStyle">
         <div style="transition: 4s" :style="starting">
+            <p style="color: red;">*Outputted Results Are Estimates As This Problem Is Unsolved In Its Current State</p>
             <h1>Cycle Pebbling</h1>
             <hr>
             <h2>Input Number of Vectices:</h2>
@@ -22,7 +23,7 @@
             </div>
             <img :style="extras" style="width: 25vw;" src="../assets/cycle/8.svg" alt="path graph">
             <div class="main-tour">
-                <h2 style="transition: 4s ease-in-out;" :style="d">What is the Cycles Pebbling Number?</h2>
+                <h2 style="transition: 4s ease-in-out;" :style="d">What is the Cycle's Pebbling Number?</h2>
                 <p style="transition: 4s ease-in-out;" :style="e">While I am not entirely certain
                     on an equation that can scale to any graph and hold true, my running theory is
                     <b>(2 to the N) / 2 + 1</b> for an even number of vertices and
