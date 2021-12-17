@@ -12,12 +12,13 @@
         <div>
             <br><br><br><br><br><br><br>
             <h2 style="transition: 3s" :style="tourTitle">The Cycle</h2>
-            <p style="transition: 3s" :style="tourTitleSub">Presented By Yona Voss-Andreae</p>
+            <p style="transition: 3s" :style="tourTitleSub">*To The Best of My Knowledge</p>
             <br><br>
             <h2 style="transition: 3s" :style="a">What is a Cycle Graph?</h2>
             <div style="max-width: 50vw;">
                 <p style="transition: 3s" :style="b">In graph theory, a cycle graph is a graph in which each 
-                Vertice has exactly a degree of 2.</p>
+                Vertice has exactly a degree of 2. Each vertex connects with an adjacent vertice
+                to form a circular graph structure</p>
             </div>
             <img :style="extras" style="width: 25vw;" src="../assets/cycle/8.svg" alt="path graph">
             <div class="main-tour">
